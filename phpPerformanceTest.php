@@ -175,3 +175,12 @@ class et_reflection{
      public function funTwo(){
          }
      }
+
+
+// run
+$ms = get_class_methods("PhpPerformanceTest");
+$mc = new PhpPerformanceTest();
+$num = 10000;
+foreach($ms as $f){
+        $mc->$f($num);
+}
